@@ -1,3 +1,3 @@
 import { string, url } from 'valibot';
 
-const Schema = string([url()]);
+const Schema = string(url());
