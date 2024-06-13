@@ -1,5 +1,5 @@
 import * as v from 'valibot';
-import { object, tuple } from 'valibot';
+import { object, tuple, tupleWithRest, objectWithRest } from "valibot"
 
-const ObjectSchema = object({ key: v.string() }, v.null_());
-const TupleSchema = tuple([v.string()], v.null_());
+const ObjectSchema = objectWithRest({ key: v.string() }, v.null_());
+const TupleSchema = tupleWithRest([v.string()], v.null_());

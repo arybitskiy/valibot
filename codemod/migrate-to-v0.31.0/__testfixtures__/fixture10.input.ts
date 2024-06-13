@@ -1,6 +1,3 @@
 import * as v from 'valibot';
 
-const Schema = v.transform(
-  v.brand(v.string(), 'Name'),
-  (input) => input.length
-);
+const Schema = v.pipe(v.string(), v.brand('Name'), v.transform((input) => input.length));

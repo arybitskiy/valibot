@@ -5,10 +5,7 @@ const Schema = v.object({
     v.string(),
     v.email(() => 'Email required')
   ),
-  union: v.union(
-    [v.pipe(v.string(), v.decimal()), v.number()],
-    [v.minValue(10)]
-  ),
+  union: v.pipe(v.union([v.pipe(v.string(), v.decimal()), v.number()]), v.minValue(10)),
   intersection: v.intersect([
     v.object({ a: v.string() }),
     v.object({ b: v.number() }),

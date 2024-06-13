@@ -1,6 +1,6 @@
-import { never, object, string, tuple, unknown } from 'valibot';
+import { never, object, string, tuple, unknown, strictTuple, strictObject, looseTuple, looseObject } from "valibot"
 
-const LooseObjectSchema = object({ key: string() }, unknown());
-const LooseTupleSchema = tuple([string()], unknown());
-const StrictObjectSchema = object({ key: string() }, never());
-const StrictTupleSchema = tuple([string()], never());
+const LooseObjectSchema = looseObject({ key: string() });
+const LooseTupleSchema = looseTuple([string()]);
+const StrictObjectSchema = strictObject({ key: string() });
+const StrictTupleSchema = strictTuple([string()]);

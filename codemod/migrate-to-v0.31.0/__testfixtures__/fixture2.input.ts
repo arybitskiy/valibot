@@ -1,12 +1,12 @@
 import * as v from 'valibot';
-import { toCustom } from 'valibot';
+import { transform } from 'valibot';
 
+v.check();
+v.GenericSchema();
+v.InferInput();
+v.InferOutput();
 v.custom();
-v.BaseSchema();
-v.Input();
-v.Output();
-v.special();
-toCustom();
+transform();
 toTrimmed();
-v.toTrimmedEnd();
-v.toTrimmedStart();
+v.trimEnd();
+v.trimStart();
