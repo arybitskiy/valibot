@@ -5,7 +5,7 @@ v.check();
 v.GenericSchema();
 v.InferInput();
 v.InferOutput();
-v.custom();
+v.check();
 transform();
 toTrimmed();
 v.trimEnd();
